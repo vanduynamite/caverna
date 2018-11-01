@@ -1,24 +1,47 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Table Structure
 
-Things you may want to cover:
+**Game**
 
-* Ruby version
+**GameBoard**
+* game_id
 
-* System dependencies
+**GameBoardSpace**
+* game_board_id
+* worker_id (null: true)
+* action_id
 
-* Configuration
 
-* Database creation
+**Player**
+* game_id
 
-* Database initialization
+**Worker**
+* player_id
+* level
+* placed
+* newborn
 
-* How to run the test suite
+**PlayerBoard**
+* player_id
 
-* Services (job queues, cache servers, search engines, etc.)
+**PlayerBoardSpace**
+* player_board_id
+* space_type_id
+* x coordinate
+* y coordinate
 
-* Deployment instructions
+**SpaceType**
+* action_id
 
-* ...
+
+
+**Action**
+* woof...
+* post_action_id
+
+**Resource**
+* resourceable_id (player, action, game_board_space, player_board_space)
+* resource_type
+* quantity
+
